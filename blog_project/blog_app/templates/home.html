@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My Blog App</title>
+  </head>
+  <body>  
+      <h1>Welcome to My Blog App</h1>
+      <p>Stay tuned for our latest blog posts on a variety of topics.</p>
+      <a href="write/">Write a blog</a>
+{% for blog in blogs  %}   
+<h1 id="blogtitle"> {{blog.title}} </h1>
+<div class="blogcontent">{{blog.content}}</div>
+{% endfor %}
+   
+
+<style>
+
+/* Body styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Header styles */
+h1 {
+  font-size: 36px;
+  text-align: center;
+  margin-top: 50px;
+}
+
+/* Introductory text styles */
+p {
+  font-size: 18px;
+  text-align: center;
+}
+
+/* Link styles */
+a {
+  display: block;
+  margin: 20px auto;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border-radius: 5px;
+  text-align: center;
+  text-decoration: none;
+  width: 200px;
+}
+
+a:hover {
+  background-color: #0056b3;
+}
+
+/* Blog title styles */
+#blogtitle {
+  font-size: 24px;
+  margin-top: 50px;
+}
+
+/* Blog content styles */
+.blogcontent {
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 50px;
+}
+
+
+</style>
+
+  </body>
+</html>
