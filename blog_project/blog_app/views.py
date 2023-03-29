@@ -25,3 +25,7 @@ def add(request):
 
 def write(request):
     return render(request,'write.html')
+
+def read(request):
+    blog=Blog.objects.all()
+    return render(request,'read.html',{'blogs':blog})

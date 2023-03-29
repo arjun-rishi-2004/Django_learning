@@ -4,18 +4,31 @@
     <title>My Blog App</title>
   </head>
   <body>  
+<div id="logo">
+  <img src="static/logo.jpeg" alt="image not found">
+</div>
+
+    <div id="main">
       <h1>Welcome to My Blog App</h1>
       <p>Stay tuned for our latest blog posts on a variety of topics.</p>
       <a href="write/">Write a blog</a>
-{% for blog in blogs  %}   
-<h1 id="blogtitle"> {{blog.title}} </h1>
-<div class="blogcontent">{{blog.content}}</div>
-{% endfor %}
-   
+      <a href="read/">Read blogs</a>
+
+    </div>
+
 
 <style>
 
 /* Body styles */
+#logo img{
+  width: 300px;
+  height: 300px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
 body {
   font-family: Arial, sans-serif;
   margin: 0;
@@ -63,6 +76,13 @@ a:hover {
   font-size: 16px;
   line-height: 1.5;
   margin-bottom: 50px;
+}
+
+#main{
+  margin-top: 50px;
+  margin-left: 33%;
+  margin-bottom: 43%;
+  position: absolute;
 }
 
 
