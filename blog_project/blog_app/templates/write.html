@@ -1,9 +1,11 @@
 <form action="add/" method="POST">
-{%csrf_token%}
+{% csrf_token %}
 <br>
 <input type='text' name='title' id='title' placeholder='title'>
 <br>
-<input type='text'  rows="40" cols="50" name='content' id='content' placeholder='write your blog here' >
+<!-- <input type='text'  rows="40" cols="50" name='content' id='content' placeholder='write your blog here' > -->
+<textarea  rows="40" cols="50" name='content' id='content' placeholder='write your blog here' ></textarea>
+
 <br>
 <input type='submit' value='submit'>
 <!-- <input type='submit' value='submit'> -->
